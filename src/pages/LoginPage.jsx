@@ -16,7 +16,7 @@ const LoginPage = () => {
   //states
 
   return (
-    <div className="bg-blue-950 h-screen ">
+    <div className="bg-custom-image  bg-center bg-no-repeat bg-cover h-screen">
       <div className="bg-gray-100 p-6 rounded max-w-lg mx-auto">
         <form className=" my-5 space-y-4" onSubmit={handleSubmit(sendInfo)}>
           {/* username field*/}
