@@ -1,12 +1,11 @@
 import React from "react";
+import LoginPage from "./pages/LoginPage";
 
 const App = () => {
   return (
-    <div>
-      <button className="bg-red-800 text-xl p-5 " type="button">
-        Submit
-      </button>
-    </div>
+    <>
+      <LoginPage />
+    </>
   );
 };
 
