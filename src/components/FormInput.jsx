@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const FormInput = ({ type, name, label, placeholder, register, error }) => {
   return (
     <>
-      <div className="space-y-2">
+      <div className="space-y-1 ">
         <label htmlFor={name} className="text-lg font-bold">
           {label}
         </label>
@@ -12,11 +12,14 @@ const FormInput = ({ type, name, label, placeholder, register, error }) => {
           name={name}
           type={type}
           placeholder={placeholder}
-          className={`px-4 py-2 rounded bg-gray-50 block w-full outline-none ${
-            error ? "border border-red-500" : "border-none"
+          className={`px-2 pb-2 rounded  bg-transparent text-gray-100  placeholder-gray-200 block w-full outline-none ${
+            error
+              ? "border-b border-red-600 placeholder-gray-400"
+              : "border-b border-gray-300"
           }`}
           {...register}
         />
+        {/* <hr className="border border-red-950" /> */}
       </div>
     </>
   );

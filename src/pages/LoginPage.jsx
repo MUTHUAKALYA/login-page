@@ -16,9 +16,12 @@ const LoginPage = () => {
   //states
 
   return (
-    <div className="bg-custom-image  bg-center bg-no-repeat bg-cover h-screen">
-      <div className="bg-gray-100 p-6 rounded max-w-lg mx-auto">
-        <form className=" my-5 space-y-4" onSubmit={handleSubmit(sendInfo)}>
+    <div className="bg-custom-image  bg-center bg-no-repeat bg-cover h-screen flex justify-center items-center">
+      <div className="bg-blue-950 p-6 rounded w-[460px] mx-auto bg-opacity-70  shadow-2xl">
+        <p className="text-white font-extrabold text-2xl text-center">
+          Sign In
+        </p>
+        <form className=" my-6 space-y-8" onSubmit={handleSubmit(sendInfo)}>
           {/* username field*/}
           <FormInput
             type="text"
