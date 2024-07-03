@@ -5,8 +5,10 @@ import FormInput from "../components/FormInput";
 
 import { FaUser } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -16,6 +18,7 @@ const LoginPage = () => {
   const sendInfo = (data) => {
     alert("You're logged in Sucessfully 👍");
     console.log(data);
+    navigate("/customer");
   };
   //states
 
