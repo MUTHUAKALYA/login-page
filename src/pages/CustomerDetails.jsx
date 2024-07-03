@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SideBar from "../components/SideBar";
 
 const CustomerDetails = () => {
   // setting details state
@@ -33,7 +34,11 @@ const CustomerDetails = () => {
     fetchDetails();
   }, []);
 
-  return <div>CustomerDetails</div>;
+  return (
+    <div>
+      <SideBar />
+    </div>
+  );
 };
 
 export default CustomerDetails;
