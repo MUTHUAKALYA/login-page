@@ -14,6 +14,7 @@ const LoginPage = () => {
   } = useForm();
 
   const sendInfo = (data) => {
+    alert("You're logged in Sucessfully 👍");
     console.log(data);
   };
   //states
@@ -40,14 +41,14 @@ const LoginPage = () => {
               name="userName"
               placeholder={"User name"}
               register={register("userName", {
-                required: "This Field is required",
+                required: "Username is required",
                 minLength: {
                   value: 3,
-                  message: "This field should have mininum of 3 characters",
+                  message: "Username should have mininum of 3 characters",
                 },
                 maxLength: {
                   value: 20,
-                  message: "This field exceeds 20 characters",
+                  message: "Username exceeds 20 characters",
                 },
               })}
               error={errors.userName}
@@ -71,14 +72,14 @@ const LoginPage = () => {
               name="password"
               placeholder={"Password"}
               register={register("password", {
-                required: "This Field is required",
+                required: "Password is required",
                 minLength: {
                   value: 3,
-                  message: "This field should have mininum of 3 characters",
+                  message: "Password should have mininum of 6 characters",
                 },
                 maxLength: {
                   value: 20,
-                  message: "This field exceeds 20 characters",
+                  message: "Password exceeds 16 characters",
                 },
               })}
               error={errors.password}
@@ -87,8 +88,22 @@ const LoginPage = () => {
           {errors.password && (
             <small className="text-red-500">{errors.password.message}</small>
           )}
-
+          <div className="flex justify-between">
+            <div className="space-x-2 text-gray-400">
+              <input type="checkbox" name="checkbox" id="chexbox" />
+              <span>Remember me</span>
+            </div>
+            <span className="text-gray-400 hover:text-gray-50 cursor-pointer">
+              Forget password?
+            </span>
+          </div>
           <FormButton label="Sign In" />
+          <p className="text-gray-300 text-center">
+            Don't have an account ?{" "}
+            <span className="underline font-medium hover:cursor-pointer hover:text-gray-50">
+              Register
+            </span>
+          </p>
         </form>
       </div>
     </div>

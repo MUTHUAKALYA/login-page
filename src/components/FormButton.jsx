@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 
 const FormButton = ({ label }) => {
   return (
-    <div>
-      <button className="px-4 py-2 mt-1 rounded-lg bg-blue-950 text-white hover:bg-blue-900 hover:text-gray-300 w-full font-bold text-md">
+    <div className=" flex items-center justify-center ">
+      <button className="px-2 py-2  rounded-lg bg-blue-400 text-gray-800 hover:bg-blue-900 hover:text-gray-300  font-bold text-md w-full">
         {label}
       </button>
     </div>
