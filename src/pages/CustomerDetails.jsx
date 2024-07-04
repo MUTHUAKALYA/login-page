@@ -36,8 +36,7 @@ const CustomerDetails = () => {
   }, []);
 
   return (
-    <div className="flex">
-      <SideBar />
+    <div className="bg-blue-900 h-screen p-10">
       <CustomerCard />
     </div>
   );
