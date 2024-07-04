@@ -37,6 +37,7 @@ const CustomerDetails = () => {
 
   return (
     <>
+      {console.log(details)}
       <div className="bg-blue-900 h-screen p-4 sm:p-10 ">
         {details != null && (
           <CustomerCard
