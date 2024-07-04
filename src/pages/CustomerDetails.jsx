@@ -5,7 +5,7 @@ import CustomerCard from "../components/CustomerCard";
 const CustomerDetails = () => {
   // setting details state
 
-  const [details, setDetails] = useState([]);
+  const [details, setDetails] = useState(null);
   useEffect(() => {
     const userName = "CAMPMATE";
     const token = "token b27e96202a47c9c:69040d57c54cbc9";
@@ -25,8 +25,8 @@ const CustomerDetails = () => {
         }
 
         const DetailsJson = await fetchedDetails.json();
-        console.log(DetailsJson); // Debug Log
-        setDetails(DetailsJson);
+        // console.log(DetailsJson); // Debug Log
+        setDetails(DetailsJson.message);
       } catch (error) {
         console.log("Fetch Error:", error);
       }
@@ -34,11 +34,24 @@ const CustomerDetails = () => {
 
     fetchDetails();
   }, []);
+  // const detailsArray = details != null && details.message;
 
   return (
-    <div className="bg-blue-900 h-screen p-10">
-      <CustomerCard />
-    </div>
+    <>
+      <div className="bg-blue-900 h-screen p-10">
+        {/* {console.log(details)} */}
+        {/* {console.log(details.customerCategory)} */}
+        {details != null && (
+          <CustomerCard
+            category={details.customerCategory}
+            code={details.customerCode}
+            name={details.customerName}
+            currency={details.default_currency}
+            territory={details.territory}
+          />
+        )}
+      </div>
+    </>
   );
 };
 
