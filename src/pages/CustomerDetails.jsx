@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import SideBar from "../components/SideBar";
 import CustomerCard from "../components/CustomerCard";
 
 const CustomerDetails = () => {
@@ -9,8 +8,11 @@ const CustomerDetails = () => {
   useEffect(() => {
     const userName = "CAMPMATE";
     const token = "token b27e96202a47c9c:69040d57c54cbc9";
-    const api = `/api/method/logistix_erp_integration.api_files.get_customer?customerName=CAMPMATE`;
+    const API_URL = import.meta.env.VITE_API_URL;
+    // console.log(API_URL);
+    const api = `${API_URL}/api/method/logistix_erp_integration.api_files.get_customer?customerName=CAMPMATE`;
 
+    console.log(api);
     const fetchDetails = async () => {
       try {
         const fetchedDetails = await fetch(api, {
