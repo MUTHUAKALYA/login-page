@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SideBar from "../components/SideBar";
+import CustomerCard from "../components/CustomerCard";
 
 const CustomerDetails = () => {
   // setting details state
@@ -35,8 +36,9 @@ const CustomerDetails = () => {
   }, []);
 
   return (
-    <div>
+    <div className="flex">
       <SideBar />
+      <CustomerCard />
     </div>
   );
 };
