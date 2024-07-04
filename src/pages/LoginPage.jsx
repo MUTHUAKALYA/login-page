@@ -103,7 +103,10 @@ const LoginPage = () => {
           <FormButton label="Sign In" />
           <p className="text-gray-300 text-center">
             Don't have an account ?{" "}
-            <span className="underline font-medium hover:cursor-pointer hover:text-gray-50">
+            <span
+              className="underline font-medium hover:cursor-pointer hover:text-gray-50"
+              title="click here to register"
+            >
               Register
             </span>
           </p>
