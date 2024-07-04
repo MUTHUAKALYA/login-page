@@ -34,13 +34,10 @@ const CustomerDetails = () => {
 
     fetchDetails();
   }, []);
-  // const detailsArray = details != null && details.message;
 
   return (
     <>
-      <div className="bg-blue-900 h-screen p-10">
-        {/* {console.log(details)} */}
-        {/* {console.log(details.customerCategory)} */}
+      <div className="bg-blue-900 h-screen p-4 sm:p-10 ">
         {details != null && (
           <CustomerCard
             category={details.customerCategory}
